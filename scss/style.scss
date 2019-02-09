@@ -1,3 +1,31 @@
-.lol{
-	color: red;
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
 }
+html, body, ul{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	margin: 0 auto;
+	max-width: 1170px;
+}
+@mixin clearfix(){
+	&::after{
+		content: '';
+		clear: both;
+		display: table;
+	}
+}
+@mixin centralizer($max-width: 100%){
+	margin: 0 auto;
+	max-width: $max-width;
+	text-align: center;
+}
+
+@font-face{
+	font-family: Bernadette;
+	src: url('../fonts/bernadette.ttf');
+}
+@import 'header';

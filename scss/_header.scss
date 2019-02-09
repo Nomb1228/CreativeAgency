@@ -1,0 +1,79 @@
+.header{
+	background-image: url("../img/header/background.png"), url("../img/header/background2.png");
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	background-position: center center, center center;
+	padding-left: 3.3125%;
+	padding-right: 4.0625%;
+	padding-top: 1.5625%;
+	&-top{
+		@include clearfix();
+	}
+}
+.logo-block{
+	position: relative;
+	float: left;
+	&__figure	{
+		display: inline-block;
+		position: absolute;
+		right: -18px;
+		bottom: 15px;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background-color: #fba419;
+	}
+}
+.nav{
+	float: right;
+	&__list{
+		display: block;
+	}
+	&__item{
+		display: inline-block;
+		margin-right: 33px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__link{
+		color: #ffffff;
+		font-family: Lato;
+		font-size: 15px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 0.24px;
+		line-height: 56px;
+	}
+}
+
+.header-banner{
+	&__headline{
+		color: #ffffff;
+		font-family: Bernadette;
+		font-size: 111px;
+		font-weight: 400;
+		/* Text style for "S, imply t" */
+		letter-spacing: -1.05px;
+		@include centralizer();
+	}
+	&__title{
+		@include centralizer();
+		color: #ffffff;
+		font-family: Lato;
+		font-size: 37px;
+		font-weight: 700;
+		/* Text style for "Reasons fo" */
+		letter-spacing: 0.61px;
+	}
+	&__text{
+		@include centralizer(639px);
+		color: #ffffff;
+		font-family: Lato;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+	}
+}
+
