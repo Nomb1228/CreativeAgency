@@ -28,4 +28,26 @@ html, body, ul{
 	font-family: Bernadette;
 	src: url('../fonts/bernadette.ttf');
 }
+.btn{
+	padding: 13px 25px;
+	text-decoration: none;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.32px;
+	box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+	border-radius: 50px 50px 50px 50px;
+	&--white{
+		background-color: #ffffff;
+		color: #020202;
+	} 
+	&--gradient{
+		background-color: #ffffff;
+		background-image: -webkit-linear-gradient(left, #de813c 0%, #3f519a 100%);
+		background-image: -o-linear-gradient(left, #de813c 0%, #3f519a 100%);
+		background-image: linear-gradient(to right, #de813c 0%, #3f519a 100%);
+	}
+}
+
 @import 'header';

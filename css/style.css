@@ -20,14 +20,60 @@ html, body, ul {
   src: url("../fonts/bernadette.ttf");
 }
 
+.btn {
+  padding: 13px 25px;
+  text-decoration: none;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  -webkit-box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  border-radius: 50px 50px 50px 50px;
+}
+
+.btn--white {
+  background-color: #ffffff;
+  color: #020202;
+}
+
+.btn--gradient {
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(left, #de813c 0%, #3f519a 100%);
+  background-image: -o-linear-gradient(left, #de813c 0%, #3f519a 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#de813c), to(#3f519a));
+  background-image: linear-gradient(to right, #de813c 0%, #3f519a 100%);
+}
+
 .header {
-  background-image: url("../img/header/background.png"), url("../img/header/background2.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  background-position: center center, center center;
+  background-image: url("../img/header/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   padding-left: 3.3125%;
   padding-right: 4.0625%;
   padding-top: 1.5625%;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.header-background {
+  background-image: url("../img/header/background2.png");
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .header-top::after {
@@ -90,6 +136,8 @@ html, body, ul {
   margin: 0 auto;
   max-width: 100%;
   text-align: center;
+  margin-top: 145px;
+  margin-bottom: 10px;
 }
 
 .header-banner__title {
@@ -102,6 +150,7 @@ html, body, ul {
   font-weight: 700;
   /* Text style for "Reasons fo" */
   letter-spacing: 0.61px;
+  margin-bottom: 41px;
 }
 
 .header-banner__text {
@@ -113,4 +162,58 @@ html, body, ul {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
+  margin-bottom: 42px;
+}
+
+.header-banner__centralize-block {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.header-banner__btn {
+  margin-bottom: 88px;
+}
+
+.item-card {
+  float: left;
+  list-style: none;
+  padding-bottom: 44px;
+  -webkit-box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-height: 420px;
+}
+
+.item-card__title {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+.item-card__description {
+  margin: 0 auto;
+  max-width: 228px;
+  text-align: center;
+}
+
+.item-card__img {
+  max-width: 372px;
+  max-height: 207px;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.item-card__centralize-block {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.item-card__btn {
+  line-height: 45px;
 }
